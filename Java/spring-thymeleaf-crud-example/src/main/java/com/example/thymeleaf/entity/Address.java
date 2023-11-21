@@ -18,6 +18,8 @@ import org.slf4j.LoggerFactory;
 public class Address {
     @Transient
     private static final Logger logger = LoggerFactory.getLogger(Address.class);
+    @Transient
+    private static final String SENSITIV_STRING = "********";
 
     @Id
     private String id;
@@ -56,14 +58,14 @@ public class Address {
     @Override
     public String toString() {
         return "Address{" +
-                "id='" + id + '\'' +
-                ", zipCode='" + zipCode + '\'' +
-                ", street='" + street + '\'' +
-                ", number='" + number + '\'' +
-                ", complement='" + complement + '\'' +
-                ", district='" + district + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
+                "id='" + SENSITIV_STRING + '\'' +
+                ", zipCode='" + SENSITIV_STRING + '\'' +
+                ", street='" + SENSITIV_STRING + '\'' +
+                ", number='" + SENSITIV_STRING + '\'' +
+                ", complement='" + SENSITIV_STRING + '\'' +
+                ", district='" + SENSITIV_STRING + '\'' +
+                ", city='" + SENSITIV_STRING + '\'' +
+                ", state='" + SENSITIV_STRING + '\'' +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 '}';

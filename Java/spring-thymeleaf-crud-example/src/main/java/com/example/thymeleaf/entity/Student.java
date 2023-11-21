@@ -18,6 +18,8 @@ import org.slf4j.LoggerFactory;
 public class Student {
     @Transient
     private static final Logger logger = LoggerFactory.getLogger(Student.class);
+    @Transient
+    private static final String SENSITIV_STRING = "********";
     @Id
     private String id;
 
@@ -49,10 +51,10 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
-                ", birthday=" + birthday +
+                "id='" + SENSITIV_STRING + '\'' +
+                ", name='" + SENSITIV_STRING + '\'' +
+                ", email='" + SENSITIV_STRING + '\'' +
+                ", birthday=" + SENSITIV_STRING +
                 ", createdAt=" + createdAt +
                 ", updatedAt=" + updatedAt +
                 ", address=" + address +
